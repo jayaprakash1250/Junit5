@@ -1,0 +1,42 @@
+package com.junit;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class CalucatorTest {
+
+	@Test
+	void test() {
+		System.out.print("Demo");
+	}
+	
+	@Test
+	public void addTest()
+	{
+		Calucator c1 = new Calucator();
+		int actual = c1.add(20, 30);
+		int expected = 50;
+		assertEquals(expected, actual, ()-> "Got Worng result :"+actual+"Expected is: "+expected);
+		
+	}
+	
+	@Test
+	public void subTest()
+	{
+		assertEquals(30, new Calucator().sub(50, 20));
+	}
+	
+	@Test
+	public void multest()
+	{
+		assertEquals(1000, new Calucator().mul(50, 20));
+	}
+	
+	@Test
+	public void div()
+	{
+		assertEquals(2, new Calucator().div(50, 20));
+	}
+
+}
